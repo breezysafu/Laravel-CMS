@@ -24,3 +24,9 @@ Route::get('/category','CategoryController@index')->name('category.index');
 
 //Category add
 Route::post('/addCategory','CategoryController@store')->name('category.add');
+
+//Remove Category
+Route::post('/deleteCategory','CategoryController@removeCategory')->name('category.remove');
+
+//Edit Category
+Route::post('/editCategory','CategoryController@editCategory')->name('category.edit');

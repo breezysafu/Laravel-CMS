@@ -92,4 +92,27 @@ class CategoryController extends Controller
     {
         //
     }
+
+    public function removeCategory(Request $request) {
+        //$data = $request->all();
+        //Find the Category
+        $category = Category::findOrFail($request->id);
+        //Delete the Category
+        $category->delete();
+        //Session Massage
+        session()->flash('Success', 'Category Named ' . $category->name . ' Removed Successuflly');
+
+        return json_encode(['Success' => 'Category Named ' . $category->name . ' Removed Successuflly']);
+    }
+    public function editCategory(Request $request) {
+        //Find Category
+        $category = Category::findOrFail($request->id);
+
+        //Change the Name
+        $category->name = $request->name;
+        //Updating Category
+        $category->update();
+        session()->flash('Success', 'Category Name changed Successfully to : ' . $category->name);
+        return json_encode(['Success' => 'Category Name changed Successfully to : ' . $category->name]);
+    }
 }
