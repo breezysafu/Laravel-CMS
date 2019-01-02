@@ -14,7 +14,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        return view ('pages.category');
+        $categories = Category::orderBy('created_at','dosc')->get();
+        return view ('pages.category')->with('categories',$categories);
     }
 
     /**
@@ -40,6 +41,9 @@ class CategoryController extends Controller
         $category->author = "Arshal";
 
         $category->save();
+
+        //success saved succesfully
+        session()->flash('Success','Category Named: '. $category->name. ' Added Successfully');
 
         return redirect()->back();
     }

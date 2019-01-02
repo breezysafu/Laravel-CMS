@@ -15,9 +15,35 @@
 
                 {!! Form::text('categoryName', '',['class'=>'form-control','placeholder'=>'Category Name']) !!}
 
-                {!! Form::submit('addCategory',['class'=>'btn btn-success btn-block']) !!}
+                {!! Form::submit('AddCategory',['class'=>'btn btn-success btn-block']) !!}
 
                 {!! Form::close() !!}
+            </div>
+            <div id="categories-table" class="table-responsive">
+                @if(count($categories)>0)
+                <table class="table">
+                    <tr>
+                        <th>ID</th>
+                        <th>Category</th>
+                        <th>Author</th>
+                        <th>Created At</th>
+                        <th>Updated At</th>
+                        <th>Edit</th>
+                        <th>Remove</th>
+                    </tr>
+                    @foreach($categories as $i=>$category)
+                    <tr>
+                        <td>{{ $i + 1 }}</td>
+                        <td>{{ $category->name }}</td>
+                        <td>{{ $category->author }}</td>
+                        <td>{{ $category->created_at }}</td>
+                        <td>{{ $category->updated_at }}</td>
+                        <td><a><span class="btn btn-warning">Edit</span></a></td>
+                        <td><a><span class="btn btn-danger">Remove</span></a></td>
+                    </tr>
+                    @endforeach
+                </table>
+                @endif
             </div>
         </div>
     </div>

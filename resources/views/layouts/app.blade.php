@@ -13,6 +13,7 @@
 </head>
 <body>
 <div class="container-fluid">
+    @include('inc.messages')
     <div class="row">
         @yield('main-row')
     </div>
