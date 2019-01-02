@@ -18,3 +18,9 @@ Route::get('/', function () {
 Route::get('/', function () {
     return view('pages.dashboard'); // or we can also use view('pages.test');
 });
+
+//Categories
+Route::get('/category','CategoryController@index')->name('category.index');
+
+//Category add
+Route::post('/addCategory','CategoryController@store')->name('category.add');

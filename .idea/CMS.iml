@@ -24,6 +24,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/nexmo-notification-channel" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/slack-notification-channel" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/tinker" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laravelcollective/html" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/lcobucci/jwt" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/league/flysystem" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/mockery/mockery" />
@@ -129,6 +130,7 @@
           <root url="file://$MODULE_DIR$/vendor/laravel/nexmo-notification-channel" />
           <root url="file://$MODULE_DIR$/vendor/laravel/slack-notification-channel" />
           <root url="file://$MODULE_DIR$/vendor/laravel/tinker" />
+          <root url="file://$MODULE_DIR$/vendor/laravelcollective/html" />
           <root url="file://$MODULE_DIR$/vendor/lcobucci/jwt" />
           <root url="file://$MODULE_DIR$/vendor/league/flysystem" />
           <root url="file://$MODULE_DIR$/vendor/mockery/mockery" />
@@ -218,6 +220,7 @@
           <root url="file://$MODULE_DIR$/vendor/laravel/nexmo-notification-channel" />
           <root url="file://$MODULE_DIR$/vendor/laravel/slack-notification-channel" />
           <root url="file://$MODULE_DIR$/vendor/laravel/tinker" />
+          <root url="file://$MODULE_DIR$/vendor/laravelcollective/html" />
           <root url="file://$MODULE_DIR$/vendor/lcobucci/jwt" />
           <root url="file://$MODULE_DIR$/vendor/league/flysystem" />
           <root url="file://$MODULE_DIR$/vendor/mockery/mockery" />
