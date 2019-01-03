@@ -30,3 +30,10 @@ Route::post('/deleteCategory','CategoryController@removeCategory')->name('catego
 
 //Edit Category
 Route::post('/editCategory','CategoryController@editCategory')->name('category.edit');
+
+//posts
+Route::get('/addNewPost','PostController@index')->name('post.index');
+
+//Add Posts
+Route::post('/addPost','PostController@store')->name('post.add');
+
