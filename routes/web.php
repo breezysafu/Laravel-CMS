@@ -37,3 +37,5 @@ Route::get('/addNewPost','PostController@index')->name('post.index');
 //Add Posts
 Route::post('/addPost','PostController@store')->name('post.add');
 
+Route::get('/blog','BlogController@index')->name('blog.index');
+Route::get('/blog/{id}','BlogController@show')->name('blog.show');
