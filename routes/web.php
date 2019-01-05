@@ -39,3 +39,9 @@ Route::post('/addPost','PostController@store')->name('post.add');
 
 Route::get('/blog','BlogController@index')->name('blog.index');
 Route::get('/blog/{id}','BlogController@show')->name('blog.show');
+
+Route::get('/admin','AdminController@index')->name('admin.index');
+Route::post('/admin','AdminController@store')->name('admin.store');
+
+Route::get('/login','Auth\AdminLoginController@index')->name('login');
+Route::post('/login','AuthAdminLoginController@login')->name('login.submit');

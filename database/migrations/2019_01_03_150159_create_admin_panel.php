@@ -13,15 +13,17 @@ class CreateAdminPanel extends Migration
      */
     public function up()
     {
-        Schema::create('admin_panel', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('title',200);
-            $table->string('author',50);
-            $table->string('category',200);
-            $table->string('image',200)->nullable();
-            $table->string('post',10000000);
-            $table->timestamps();
-        });
+        if(!Schema::hasTable("admin_panel")) {
+            Schema::create('admin_panel', function (Blueprint $table) {
+                $table->increments('id');
+                $table->string('title', 200);
+                $table->string('author', 50);
+                $table->string('category', 200);
+                $table->string('image', 200)->nullable();
+                $table->string('post', 10000000);
+                $table->timestamps();
+            });
+        }
     }
 
     /**
